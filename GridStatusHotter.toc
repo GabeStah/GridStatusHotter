@@ -1,0 +1,14 @@
+## Interface: 60000
+## Version: 2.0.3
+
+## Title: GridStatusHotter
+## Author: Kulldam
+## Notes: Another HoT tracker module
+## X-Website: http://wowace.com/wiki/Grid
+## X-Category: UnitFrame
+## X-GridStatusModule: GridStatusHotter
+## RequiredDeps: Grid
+## DefaultState: Enabled
+## LoadOnDemand: 0
+
+GridStatusHotter.lua
