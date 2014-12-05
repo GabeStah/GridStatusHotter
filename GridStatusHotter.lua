@@ -39,18 +39,38 @@ local UPDATE_FREQUENCY = 0.1
 TODO: Add "duration threshold" option.  Show duration by default if duration is less than threshold duration, otherwise hide duration
 ]]
 local TRACKED_SPELLS = {
-	[774] = { class = 'DRUID', name = L['Rejuvenation'], },
-	[8936] = { class = 'DRUID', name = L['Regrowth'], },
+	-- DRUID
+	[774] 	=	{ class = 'DRUID', name = L['Rejuvenation'], },
+	[8936] 	=	{ class = 'DRUID', name = L['Regrowth'], },
 	[33763] = {
 		class = 'DRUID',	
 		defaultOptions = {
-			colorByStack = true,
 			threshold2 = 8,
 			threshold3 = 1,
 		},
 		name = L['Lifebloom'],		
 	},
-	[48438] = { class = 'DRUID', name = L['Wild Growth'], },
+	[48438] 	= { class = 'DRUID', name = L['Wild Growth'], },
+	[102342] 	= { class = 'DRUID', name = L['Ironbark'], },
+	[102351] 	= {
+		class = 'DRUID',	
+		defaultOptions = {
+			threshold2 = 8,
+			threshold3 = 4,
+		},
+		name = L['Cenarion Ward'],
+	},
+	[102352] 	= { class = 'DRUID', name = L['Cenarion Ward'], },
+	[145518] 	= { class = 'DRUID', name = L['Genesis'], },
+	[155777] 	= {
+		class = 'DRUID',	
+		defaultOptions = {
+			threshold2 = 5,
+			threshold3 = 1,
+		},
+		name = L['Rejuvenation (Germination)'],
+	},	
+	-- MONK
 	[115175] = {
 		class = 'MONK',	
 		defaultOptions = {
@@ -58,14 +78,6 @@ local TRACKED_SPELLS = {
 			threshold3 = 1,
 		},
 		name = L['Soothing Mist'],
-	},
-	[155777] = {
-		class = 'DRUID',	
-		defaultOptions = {
-			threshold2 = 5,
-			threshold3 = 1,
-		},
-		name = L['Rejuvenation (Germination)'],
 	},
 	[116849] = {
 		class = 'MONK',	
@@ -99,15 +111,18 @@ local TRACKED_SPELLS = {
 		},
 		name = L['Enveloping Mist'],		
 	},	
-	[20925] = { class = 'PALADIN', name = L['Sacred Shield'], },	
-	[53563] = { class = 'PALADIN', name = L['Beacon of Light'], },
-	[114163] = { class = 'PALADIN', name = L['Eternal Flame'], },
-	[17] = { class = 'PRIEST', name = L['Power Word: Shield'], },
-	[139] = { class = 'PRIEST', name = L['Renew'], },
-	[6788] = { class = 'PRIEST', name = L['Weakened Soul'], },
+	-- PALADIN
+	[20925] 	= { class = 'PALADIN', name = L['Sacred Shield'], },	
+	[53563] 	= { class = 'PALADIN', name = L['Beacon of Light'], },
+	[114163] 	= { class = 'PALADIN', name = L['Eternal Flame'], },
+	-- PRIEST
+	[17] 		= { class = 'PRIEST', name = L['Power Word: Shield'], },
+	[139] 	= { class = 'PRIEST', name = L['Renew'], },
+	[6788] 	= { class = 'PRIEST', name = L['Weakened Soul'], },
 	[41635] = { class = 'PRIEST', name = L['Prayer of Mending'], },
 	[77613] = { class = 'PRIEST', name = L['Grace'], },
 	[88682] = { class = 'PRIEST', name = L['Holy Word Aspire'], },
+	-- SHAMAN
 	[974] = { 
 		defaultOptions = {
 			stacks = true,
@@ -116,9 +131,7 @@ local TRACKED_SPELLS = {
 		name = L['Earth Shield'], 
 	},
 	[51945] = { class = 'SHAMAN', name = L['Earthliving'], },
-	[61295] = { 
-		class = 'SHAMAN', name = L['Riptide'], 
-	},
+	[61295] = { class = 'SHAMAN', name = L['Riptide'], },
 }
 
 local DEFAULT_STATUS_OPTIONS = {
